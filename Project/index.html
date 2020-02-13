@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CoTe</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/sticky_slider_nav.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" href="assets/img/logo/ruin_logo_text_50.png" type="image/png">
+	</head>
+	<body>
+	<!-- Hero -->
+	<section class="et-hero-tabs">
+		<h1>«CoTe» Formatting</h1>
+		<h3>Code Formatting</h3>
+		<h3>Приведи свой код в порядок</h3>
+		<div class="et-hero-tabs-container">
+		<a class="et-hero-tab" href="#tab-Formatting">Formatting</a>
+		<a class="et-hero-tab" href="#tab-Example">Example</a>
+		<a class="et-hero-tab" href="#tab-Feedback">Feedback</a>
+		<span class="et-hero-tab-slider"></span>
+		</div>
+	</section>
+
+	<!-- Main -->
+	<main class="et-main">
+	  <section class="et-slide" id="tab-Formatting">
+		<h1>Formatting</h1>
+		<h3>Форматирование кода</h3>
+		<div class="container">
+			<button onclick="edit_text()"class="ripple btn btn_edit icon fa-pencil">Исправить</button>
+			<button onclick="clearalltext('textarea1','textarea2')" class="ripple btn btn_clear icon fa-eraser">Очистить все</button></br>
+			<span>Отступ:</span>
+			<select id="Select_Tab">
+				<option value='	' selected="selected">Tab</option>
+				<option value=' '>1 Пробел</option>
+				<option value='  '>2 Пробела</option>
+				<option value='   '>3 Пробела</option>
+			</select><br/>
+			<div class="block">
+			<textarea id="textarea1" placeholder="Поле для ввода кода"></textarea>
+			</div>
+			<div class="block">
+			<textarea id="textarea2"></textarea>
+			</div>
+			<div class="dopinfo">
+				<span>Количество символов:</span>
+				<span id="symb1"></span><br/>
+				<span>Количество символов без пробелов:</span>
+				<span id="symb2"></span><br/>
+				<span>Количество строк:</span>
+				<span id="symb3"></span><br/>
+			</div><br/>
+			<button onclick="copytext('textarea2')" class="ripple btn icon fa-clone">Копировать</button>
+			<button onclick="cleartext('textarea2')" class="ripple btn btn_clear icon fa-eraser">Очистить</button></br>
+		</div>
+	  </section>
+	  <section class="et-slide" id="tab-Example">
+		<h1>Example</h1>
+		<h3>Примеры форматирования</h3>
+		<div class="container example_cont">
+			<div class="block">
+			<textarea id="textarea_Example1" readonly>	int main()
+	{
+int a, b;
+cin >> a >> b;
+if (a % 2 == 0) {
+	cout << a *b << endl;
+		} else {
+	cout << a + b << endl;
+}
+	}</textarea>
+	</div>
+			<div class="block">
+			<textarea id="textarea_Example1_e"  readonly>int main()
+{
+	int a, b;
+	cin >> a >> b;
+	if (a % 2 == 0)
+	{
+		cout << a *b << endl;
+	}
+	else
+	{
+		cout << a + b << endl;
+	}
+}
+</textarea>
+</div>
+			<button onclick="copytext('textarea_Example1')" class="ripple btn icon fa-clone">Копировать</button></br>
+			<div class="block">
+			<textarea id="textarea_Example2" readonly>	int main(){int a, b;cin >> a >> b;if (a % 2 == 0) {cout << a *b << endl;	} else {cout << a + b << endl;}}</textarea>
+			</div>
+			<div class="block">
+			<textarea id="textarea_Example2_e" readonly>int main()
+{
+	int a, b;
+	cin >> a >> b;
+	if (a % 2 == 0)
+	{
+		cout << a *b << endl;
+	}
+	else
+	{
+		cout << a + b << endl;
+	}
+}
+</textarea>
+</div>
+			<button onclick="copytext('textarea_Example2')" class="ripple btn icon fa-clone">Копировать</button></br>
+		</div>
+	  </section>
+	  
+	  <section class="et-slide" id="tab-Feedback">
+		<h1>Feedback</h1>
+		<h3>Обратная связь</h3>
+		<div class="container feedback">
+		<form id="contact-form" action="" method="post" role="form" class="contactForm">
+			<p>Если у Вас есть какие-либо вопросы и пожелания, то Вы можете связаться с нами заполнив следующую форму:</p>
+			<div class="cols">
+				<div class="form-group">
+					<p>Ваше имя:</p>
+					<input type="text" name="name" class="back" placeholder="Ваше имя" data-rule="minlen:3" data-msg="Пожалуйста, введите больше 3 символов"/>
+					<div class="validation"></div>
+				</div>
+				<div class="form-group">
+					<p>Ваш e-mail:</p>
+					<input type="email" name="mail" class="back" placeholder="Ваш e-mail" data-rule="email" data-msg="Пожалуйста, введите корректный e-mail"/>
+					<div class="validation"></div>
+				</div>
+				<div class="form-group">
+					<p>Тема:</p>
+					<input type="text" name="sub" class="back" placeholder="Тема сообщения" data-rule="minlen:3" data-msg="Пожалуйста, введите больше 3 символов"/>
+					<div class="validation"></div>
+				</div>
+			</div>
+			<div class="cols">
+				<div class="form-group">
+					<p>Текст сообщения:</p>
+					<textarea name="message" placeholder="Текст сообщения" data-rule="minlen:3" data-msg="Пожалуйста, введите больше 3 символов"></textarea>
+					<div class="validation"></div>
+					<div class="form_result back" id="form_result"></div>
+				</div>
+			</div>
+			<input id="submit" type="submit" class="btn"/>
+		</form>
+		</div>
+	  </section>
+	  
+	</main>
+	
+	<footer>
+    <div class="container footer-color">	
+        <h6>&copy;<a href="https://alexitsl.github.io/Presentation/" target="_blank">RUINЪ.</a></h6>
+		<a href="https://alexitsl.github.io/Presentation/" target="_blank">
+			<img src="assets/img/logo/ruin_logo_100.png" alt="logo" class="logo"/>
+		</a>
+    </div>
+  </footer>
+	
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/sticky_slider_nav.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
