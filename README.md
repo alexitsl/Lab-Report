@@ -1,8 +1,8 @@
 ## Целыковский А.М. ИДМ-19-02
 Страница с лабораторными по интернет-технологиям
 * [Github профиль](https://github.com/alexitsl)
-* [Репозиторий](https://github.com/alexitsl/alexitsl.github.io)
-* [Отчет](https://alexitsl.github.io)
+* [Репозиторий](https://github.com/alexitsl/Lab-Report)
+* [Отчет](https://alexitsl.github.io/Lab-Report)
 
 ### Дополнительные полезности
 * [inet-2019](https://github.com/stankin/inet-2019)
@@ -10,8 +10,8 @@
 * [Кондуит](https://docs.google.com/spreadsheets/d/1YBfCBfGZrUc5XJoWlb0x65fSch9kpcsCB17mJ0z-89s/edit#gid=1327184368)
 
 ### Проектик
-* [Сайт проект - «CoTe» Formatting](https://alexitsl.github.io/Project)
-* [Сайт презентация проекта и команды - «RUINЪ»](https://alexitsl.github.io/Presentation)
+* [Сайт проект - «CoTe» Formatting](https://alexitsl.github.io/Lab-Report/Project)
+* [Сайт презентация проекта и команды - «RUINЪ»](https://alexitsl.github.io/Lab-Report/Presentation)
 
 ### Первый репозиторий
 ![Информация о первом репозитории](images/screen.png)<br/>
